@@ -1,0 +1,144 @@
+.work {
+  .columns {
+    padding: 0;
+  }
+}
+
+.work__large-section {
+  display: table;
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+}
+
+.work__large-section--first {
+  background-image: url("../img/image1.png");
+  background-repeat: no-repeat;
+}
+
+.work__large-section--second {
+  background-image: url("../img/image3.png");
+  background-repeat: no-repeat;
+}
+
+.work__large-section--third {
+  background-image: url("../img/image5.png");
+  background-repeat: no-repeat;
+}
+
+.work__large-section--fourth {
+  background-image: url("../img/image6.png");
+  background-repeat: no-repeat;
+}
+
+.work__bike-logo {
+  display: table-cell;
+  vertical-align: middle;
+  span {
+    display: block;
+    margin: auto;
+    width: 113px;
+    height: 118px;
+    background: url("../img/logo2.png") no-repeat;
+  }
+}
+
+.work__vintage-logo {
+  display: table-cell;
+  vertical-align: middle;
+  span {
+    display: block;
+    margin: auto;
+    width: 177px;
+    height: 152px;
+    background: url("../img/vintage-logo.png") no-repeat;
+  }
+}
+
+.work__bike-logo2 {
+  display: table-cell;
+  vertical-align: middle;
+  span {
+    display: block;
+    margin: auto;
+    width: 208px;
+    height: 67px;
+    background: url("../img/bicycle-logo.png") no-repeat;
+  }
+}
+
+.work__small-section {
+  position: relative;
+  padding: 65px 65px 55px 65px;
+  height: 400px;
+  background-color: $white-color;
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    bottom: -37px;
+    left: 50%;
+    margin-left: -17px;
+    border: 20px solid transparent;
+    border-top: 20px solid $white-color;
+  }
+}
+
+.small-section__wrapper {
+  overflow: hidden;
+  height: 218px;
+}
+
+.work__text {
+  color: $gray-color;
+  line-height: 30px;
+  text-align: justify;
+}
+
+.work__icon1 {
+  width: 41px;
+  height: 30px;
+  margin: auto;
+  background-position: -7px -108px;
+}
+
+.work__icon2 {
+  width: 32px;
+  height: 32px;
+  margin: auto;
+  background-position: -7px -152px;
+}
+
+.work__icon3 {
+  width: 23px;
+  height: 41px;
+  margin: auto;
+  background-position: -7px -198px;
+}
+
+.work__line {
+  margin: 7% auto 0 auto;
+  width: 50px;
+  height: 1px;
+  background-color: #d7d7d7;
+}
+
+.work__xsmall-section {
+  height: 200px;
+  background-size: cover;
+}
+
+.work__xsmall-section--first {
+  background-image: url("../img/image2.png");
+  background-repeat: no-repeat;
+}
+
+.work__xsmall-section--second {
+  background-image: url("../img/image4.png");
+  background-repeat: no-repeat;
+}
+
+.work__xsmall-section--third {
+  background-image: url("../img/image7.png");
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,146 @@
+.shop {
+  background-color: $black-color;
+  .columns {
+    padding: 0;
+  }
+}
+
+.shop__small-section {
+  position: relative;
+  overflow: hidden;
+  width: 50%;
+  img {
+    display: block;
+    height: auto;
+    width: 100%;
+    transition: $shop-transition;
+  }
+}
+
+.shop__large-horizontal {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  img {
+    display: block;
+    height: auto;
+    width: 100%;
+    transition: $shop-transition;
+  }
+}
+
+.shop__large-vertical {
+  position: relative;
+  overflow: hidden;
+  width: 50%;
+  img {
+    display: block;
+    height: auto;
+    width: 100%;
+    transition: $shop-transition;
+  }
+}
+
+.shop__panel {
+  padding: 75px 0;
+}
+
+.shop__button {
+  display: block;
+  margin: auto;
+  width: 300px;
+  padding: 17px 0;
+  border: 1px solid $gray-color;
+  color: $white-color;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 14px;
+  transition: $main-transition;
+  &:hover {
+    border-color: $light-green;
+    color: $light-green;
+    transition: .35s ease-out;
+  }
+}
+
+.image-hover {
+  transform: scale(1.1);
+}
+
+.shop__item-overlay {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-color: rgba(100, 194, 158, 0.8);
+  transition: $shop-transition;
+  &:hover {
+    opacity: 1;
+    transition: $shop-transition;
+  }
+}
+
+.shop__overlay-info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: 57px;
+}
+
+.shop__overlay-img {
+  margin: auto;
+  width: 51px;
+  height: 30px;
+  background: url("../img/icons.png") no-repeat -7px -7px;
+}
+
+.shop__overlay-text {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  color: $white-color;
+  letter-spacing: 2px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -300%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInDown {
+  animation: fadeInDown .4s;
+}
+
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(0, -300%, 0);
+  }
+}
+
+.fadeOutUp {
+  animation: fadeOutUp .4s;
+}
