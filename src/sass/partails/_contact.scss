@@ -1,0 +1,60 @@
+.contact {
+  padding-top: 108px;
+  padding-bottom: 111px;
+  background-color: $white-color;
+}
+
+.contact__logo {
+  width: 94px;
+  height: 85px;
+  margin: 0 auto 35px auto;
+  background: url("../img/logo.png") no-repeat;
+  &:hover {
+    animation: jello 1s;
+  }
+}
+
+.contact__slogan {
+  padding-bottom: 36px;
+  color: $gray-color;
+  text-align: center;
+  font-size: 24px;
+  font-style: italic;
+}
+
+.contact__form {
+  width: 535px;
+  margin: auto;
+  @include clearfix;
+}
+
+.contact__email {
+  float: left;
+  display: block;
+  margin: auto;
+  padding: 21px 25px;
+  width: 400px;
+  border: 1px solid #d3d7d9;
+  color: $gray-color;
+  font-size: 20px;
+  font-style: italic;
+}
+@include placeholder {
+  color: #c8c8c8;
+}
+@include placeholder-focus {
+  color: transparent;
+}
+
+.contact__button {
+  float: left;
+  display: block;
+  width: 125px;
+  margin-left: 8px;
+  color: $white-color;
+  line-height: 69px;
+  border-radius: 0;
+  background-color: $light-green;
+  font-size: 24px;
+  font-weight: 300;
+}
