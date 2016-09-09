@@ -1,7 +1,11 @@
 .contact {
   padding-top: 108px;
-  padding-bottom: 111px;
+  padding-bottom: 108px;
   background-color: $white-color;
+}
+
+.contact-animate {
+  visibility: hidden;
 }
 
 .contact__logo {
@@ -32,12 +36,19 @@
   float: left;
   display: block;
   margin: auto;
+  margin-bottom: 3px;
   padding: 21px 25px;
   width: 400px;
   border: 1px solid #d3d7d9;
   color: $gray-color;
   font-size: 20px;
   font-style: italic;
+  transition: $main-transition;
+  &:focus {
+    border: 1px solid #dcdfe1;
+    background-color: #fafffc;
+    transition: $main-transition;
+  }
 }
 @include placeholder {
   color: #c8c8c8;
@@ -57,4 +68,13 @@
   background-color: $light-green;
   font-size: 24px;
   font-weight: 300;
+  transition: $main-transition;
+  &:hover {
+    background-color: #6bcea8;
+    transition: $main-transition;
+  }
+  &:active {
+    background-color: #57a98a;
+    transition: $main-transition;
+  }
 }

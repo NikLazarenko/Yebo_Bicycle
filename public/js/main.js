@@ -1,3 +1,16 @@
+(function($) {
+    $.fn.animateWithScroll = function(inputAnimate) {
+        $(this).addClass("animated").waypoint(function() {
+            $(this).addClass(inputAnimate).css("visibility", 'visible');
+        }, {
+            offset: "70%"
+        }), {
+            offset: -$(window).height()
+        };
+    };
+})(jQuery);
+
+
 $(document).ready(function(){
 
     $('.news__wrapper').slick({
@@ -13,11 +26,44 @@ $(document).ready(function(){
     //show overlay on hover shop item
     $('.shop__small-section, .shop__large-horizontal, .shop__large-vertical').hover(function(){
         $('img', this).addClass('image-hover');
-        $('.shop__overlay-info', this).removeClass('fadeOutUp').addClass('fadeInDown');
+        $('.shop__overlay-info', this).removeClass('fadeOutUp').addClass('fadeInDownBig');
     },
         function(){
             $('img', this).removeClass('image-hover');
-            $('.shop__overlay-info', this).removeClass('fadeInDown').addClass('fadeOutUp');
+            $('.shop__overlay-info', this).removeClass('fadeInDownBig').addClass('fadeOutUp');
         }
     );
+
+    $('.menu a').click(function(){
+        $(this).mPageScroll2id();
+    });
+
+    //scroll animation
+    $('.about-us').animateWithScroll('zoomIn');
+    $('.work__large-section--first').animateWithScroll('fadeInLeft');
+    $('.work__small-section--first').animateWithScroll('fadeInRight');
+    $('.work__xsmall-section--first').animateWithScroll('fadeInUp');
+
+    $('.work__large-section--second').animateWithScroll('fadeInRight');
+    $('.work__small-section--second').animateWithScroll('fadeInLeft');
+    $('.work__xsmall-section--second').animateWithScroll('fadeInUp');
+
+    $('.work__large-section--third').animateWithScroll('fadeInLeft');
+    $('.work__small-section--third').animateWithScroll('fadeInUp');
+    $('.work__xsmall-section--third').animateWithScroll('fadeInUp');
+    $('.work__large-section--fourth').animateWithScroll('fadeInRight');
+
+    $('.news').animateWithScroll('fadeInUp');
+
+    $('#shop__small-section--1').animateWithScroll('fadeInLeft');
+    $('#shop__small-section--2').animateWithScroll('fadeInDown');
+    $('#shop__large-horizontal--1').animateWithScroll('fadeInUp');
+    $('#shop__large-vertical--1').animateWithScroll('fadeInDown');
+    $('#shop__large-vertical--2').animateWithScroll('fadeInUp');
+    $('#shop__large-horizontal--2').animateWithScroll('fadeInDown');
+    $('#shop__small-section--3').animateWithScroll('fadeInUp');
+    $('#shop__small-section--4').animateWithScroll('fadeInRight');
+    $('.shop__panel').animateWithScroll('zoomIn');
+
+    $('.contact-animate').animateWithScroll('fadeInDown');
 });
