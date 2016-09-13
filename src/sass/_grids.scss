@@ -1,38 +1,23 @@
-$large: 1199px;
-$big: 991px;
-$medium: 767px;
-$small: 639px;
-$low: 479px;
-$extra-small: 359px;
-$minimum: 319px;
-
-$height: 450px;
+$xsmall: 360px;
+$small: 480px;
+$medium: 640px;
+$large: 1024px;
+$xlarge: 1440px;
 
 @mixin breakpoint($point) {
-  @if $point == desktop  {
+  @if $point == xlarge-b  {
+    @media only screen and(max-width: $xlarge) { @content ; }
+  }
+  @else if $point == large-b {
     @media only screen and(max-width: $large) { @content ; }
   }
-  @else if $point == laptop {
-    @media only screen and(max-width: $big) { @content ; }
-  }
-  @else if $point == tablet {
+  @else if $point == medium-b {
     @media only screen and(max-width: $medium) { @content ; }
   }
-    @else if $point == big-phones {
+  @else if $point == small-b {
     @media only screen and (max-width: $small){ @content ; }
   }
-  @else if $point == phone {
-    @media only screen and(max-width: $low)  { @content ; }
-  }
-  @else if $point == mobile {
-    @media only screen and(max-width: $extra-small)  { @content ; }
-  }
-  @else if $point == custom {
-    @media only screen and(max-width: $minimum)  { @content ; }
-  }
-
-
-  @else if $point == for-height {
-    @media only screen and (max-height: $height) { @content ;}
+  @else if $point == xsmall-b {
+    @media only screen and (max-width: $xsmall){ @content ; }
   }
 }

@@ -2,6 +2,15 @@
   padding-top: 117px;
   padding-bottom: 137px;
   visibility: hidden;
+  @include breakpoint(xlarge-b) {
+    padding: 100px 20px;
+  }
+  @include breakpoint(large-b) {
+    padding: 70px 15px;
+  }
+  @include breakpoint(small-b) {
+    padding: 50px 15px;
+  }
 }
 
 .about-us__icon {
@@ -17,4 +26,14 @@
   text-align: center;
   line-height: 33px;
   font-size: 18px;
+  @include breakpoint(xlarge-b) {
+    padding: 0;
+  }
+  @include breakpoint(large-b) {
+    text-align: justify;
+  }
+  @include breakpoint(small-b) {
+    line-height: 24px;
+    font-size: 16px;
+  }
 }

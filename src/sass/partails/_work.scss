@@ -86,6 +86,9 @@
     border: 20px solid transparent;
     border-top: 20px solid $white-color;
   }
+  @include breakpoint(xlarge-b) {
+    padding: 40px 40px 30px 40px;
+  }
 }
 
 .small-section__wrapper {
@@ -97,6 +100,9 @@
   color: $gray-color;
   line-height: 30px;
   text-align: justify;
+  @include breakpoint(xlarge-b) {
+    line-height: 26px;
+  }
 }
 
 .work__icon1 {
