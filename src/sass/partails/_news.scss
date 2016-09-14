@@ -2,6 +2,19 @@
   visibility: hidden;
   padding-top: 120px;
   padding-bottom: 60px;
+  @include breakpoint(xlarge-b) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  @include breakpoint(large-b) {
+    padding: 80px 30px 40px 30px;
+  }
+  @include breakpoint(medium-b) {
+    padding: 60px 30px 40px 30px;
+  }
+  @include breakpoint(small-b) {
+    padding: 40px 20px 30px 20px;
+  }
 }
 
 .news__twitter-icon {
@@ -23,6 +36,11 @@
     color: $gray-color;
     font-size: 18px;
   }
+  @include breakpoint(small-b) {
+    padding-top: 20px;
+    padding-bottom: 12px;
+    font-size: 16px;
+  }
 }
 
 .news__body {
@@ -35,5 +53,18 @@
   font-size: 24px;
   @include breakpoint(xlarge-b) {
     padding-left: 0;
+  }
+  @include breakpoint(large-b) {
+    padding-bottom: 60px;
+    line-height: 30px;
+    font-size: 21px;
+  }
+  @include breakpoint(medium-b) {
+    padding-bottom: 40px;
+  }
+  @include breakpoint(small-b) {
+    padding-bottom: 30px;
+    line-height: 26px;
+    font-size: 18px;
   }
 }

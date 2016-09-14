@@ -47,6 +47,9 @@
 .shop__panel {
   visibility: hidden;
   padding: 75px 0;
+  @include breakpoint(xsmall-b) {
+    padding: 60px 0;
+  }
 }
 
 .shop__button {
@@ -65,6 +68,10 @@
     border-color: $light-green;
     color: $light-green;
     transition: .35s ease-out;
+  }
+  @include breakpoint(small-b) {
+    padding: 15px 4px;
+    width: 70%;
   }
 }
 
@@ -96,6 +103,7 @@
   margin: auto;
   width: 100%;
   height: 57px;
+  text-align: center;
 }
 
 .shop__overlay-img {
@@ -106,16 +114,21 @@
 }
 
 .shop__overlay-text {
-  position: absolute;
-  bottom: 0;
-  display: block;
-  width: 100%;
+  display: inline-block;
+  padding-top: 12px;
   text-transform: uppercase;
   text-align: center;
   color: $white-color;
   letter-spacing: 2px;
   font-size: 14px;
   font-weight: bold;
+  pointer-events: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  @include breakpoint(xsmall-b) {
+    font-size: 13px;
+  }
 }
 
 @keyframes fadeInDownBig {
@@ -147,4 +160,8 @@
 
 .fadeOutUp {
   animation: fadeOutUp .4s;
+}
+
+.shop--link-state {
+  pointer-events: inherit;
 }

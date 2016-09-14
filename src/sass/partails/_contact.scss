@@ -1,7 +1,15 @@
 .contact {
-  padding-top: 108px;
-  padding-bottom: 108px;
+  padding: 108px 0;
   background-color: $white-color;
+  @include breakpoint(large-b) {
+    padding: 80px 0;
+  }
+  @include breakpoint(medium-b) {
+    padding: 60px 0;
+  }
+  @include breakpoint(small-b) {
+    padding: 40px 0;
+  }
 }
 
 .contact-animate {
@@ -16,6 +24,12 @@
   &:hover {
     animation: jello 1s;
   }
+  @include breakpoint(medium-b) {
+    width: 84px;
+    height: 76px;
+    margin: 0 auto 25px auto;
+    background-size: contain;
+  }
 }
 
 .contact__slogan {
@@ -24,12 +38,19 @@
   text-align: center;
   font-size: 24px;
   font-style: italic;
+  @include breakpoint(medium-b) {
+    padding-bottom: 30px;
+    font-size: 21px;
+  }
 }
 
 .contact__form {
   width: 535px;
   margin: auto;
   @include clearfix;
+  @include breakpoint(medium-b) {
+    width: 75%;
+  }
 }
 
 .contact__email {
@@ -48,6 +69,14 @@
     border: 1px solid #dcdfe1;
     background-color: #fafffc;
     transition: $main-transition;
+  }
+  @include breakpoint(medium-b) {
+    float: none;
+    width: 100%;
+  }
+  @include breakpoint(xsmall-b) {
+    padding: 18px 20px;
+    font-size: 18px;
   }
 }
 @include placeholder {
@@ -76,5 +105,16 @@
   &:active {
     background-color: #57a98a;
     transition: $main-transition;
+  }
+  @include breakpoint(medium-b) {
+    float: none;
+    margin: auto;
+    margin-top: 7px;
+    width: 100%;
+    line-height: 60px;
+  }
+  @include breakpoint(xsmall-b) {
+    line-height: 55px;
+    font-size: 21px;
   }
 }

@@ -1,6 +1,12 @@
 .footer {
   padding-top: 96px;
   padding-bottom: 100px;
+  @include breakpoint(large-b) {
+    padding: 75px 0;
+  }
+  @include breakpoint(medium-b) {
+    padding: 50px 0;
+  }
 }
 
 .footer__location {
@@ -14,12 +20,18 @@
     font-size: 14px;
     font-style: italic;
   }
+  @include breakpoint(medium-b) {
+    text-align: center;
+  }
 }
 
 .footer__social-buttons {
   display: table;
   margin: auto;
   line-height: 52px;
+  @include breakpoint(medium-b) {
+    padding-top: 15px;
+  }
 }
 
 .footer__social-item{
@@ -79,4 +91,12 @@
     height: 36px;
     background: url("../img/yebo-logo.png") no-repeat;
   }
+  @include breakpoint(medium-b) {
+    display: inline-block;
+    text-align: center;
+  }
+}
+
+.footer__copyright--centered {
+  text-align: center;
 }

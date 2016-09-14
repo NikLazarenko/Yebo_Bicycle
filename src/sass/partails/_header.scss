@@ -1,7 +1,12 @@
 .header {
   width: 100%;
-  height: 800px;
+  height: 100vh;
   padding-top: 35px;
+  background: url("../img/header-background.png") no-repeat center fixed;
+  background-size: cover;
+  @include breakpoint(large-b) {
+    height: 100vh;
+  }
 }
 
 .menu {
@@ -135,6 +140,9 @@
   @include breakpoint(medium-b) {
     padding-top: 18px;
   }
+  @include breakpoint(small-b) {
+    padding-top: 12px;
+  }
 }
 
 .mobile-menu__panel {
@@ -151,6 +159,9 @@
   }
   @include breakpoint(medium-b) {
     padding: 14px 0;
+  }
+  @include breakpoint(small-b) {
+    padding: 11px 0;
   }
 }
 
@@ -180,5 +191,9 @@
   background-size: contain;
   &:hover {
     animation: jello 1s;
+  }
+  @include breakpoint(small-b) {
+    width: 60px;
+    height: 43px;
   }
 }
